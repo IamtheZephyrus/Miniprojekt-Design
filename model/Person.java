@@ -1,7 +1,4 @@
 package model;
-
-
-
 public class Person
 {
     // instance variables - replace the example below with your own

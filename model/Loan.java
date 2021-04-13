@@ -1,20 +1,25 @@
 package model;
-
+import java.time.LocalDateTime;
 public class Loan
 {
     // instance variables - replace the example below with your own
     private int loanNumber;
-    private String borrowDate;
+    private LocalDateTime borrowDate;
     private String period;
     private String state;
-
+    private Copy copy;
+    private Person person;
     /**
      * Constructor for objects of class Loan
      */
-    public Loan()
+    public Loan(int loanNumber, String period, String State,LP lp , Person person)
     {
-        // initialise instance variables
-        
+        this.loanNumber = loanNumber;
+        this.borrowDate = LocalDateTime.now();
+        this.period = period;
+        this.state = state;
+        this.copy = copy;
+        this.person = person;
     }
     
     public void setLoanNumber(int loanNumber)
@@ -27,14 +32,9 @@ public class Loan
         return loanNumber;
     }
     
-    public void setBorrowDate(String borrowDate)
+    public LocalDateTime getBorrowDate()
     {
-        this.borrowDate = borrowDate;
-    }
-    
-    public String getBorrowDate()
-    {
-        return borrowDate;
+        return this.borrowDate;
     }
     
     public void setPeriod(String period)

@@ -1,5 +1,5 @@
 package model;
-
+import java.util.ArrayList;
 
 public class LP
 {
@@ -7,17 +7,19 @@ public class LP
     private String titel;
     private String artist;
     private String publicationDate;    
-    private int serialNumber;
+    private int barcode;
+    private ArrayList<Copy> copies;
 
     /**
      * Constructor for objects of class LP
      */
-    public LP(String newTitel, String newArtist, int newSerieNr)
+    public LP(String newTitel, String newArtist, int newBarcode)
     {
         // initialise instance variables
         this.titel = newTitel;
-        this.serialNumber = newSerieNr;
+        this.barcode = newBarcode;
         this.artist = newArtist;
+        copies = new ArrayList<>();
     }
     
     public void setTitel(String titel) 
@@ -30,14 +32,14 @@ public class LP
         return titel;
     }
     
-    public void setSerieNr(int serieNr)
+    public void setBarcode(int barcode)
     {
-        this.serialNumber = serieNr;
+        this.barcode = barcode;
     }
     
-    public int getSerieNr()
+    public int getBarcode()
     {
-        return serialNumber;
+        return barcode;
     }
     
     public void setArtist(String artist)
@@ -54,9 +56,19 @@ public class LP
     {
         System.out.println(getArtist());
         System.out.println(getTitel());
-        System.out.println(getSerieNr()); 
-        
+        System.out.println(getBarcode()); 
     }
 
-    
+    public Copy findCopyBySerialNumber(int serialNumber)
+    {
+        Copy x = null;
+        for(Copy c : copies)
+        {
+            if(c.getSerialNumber() == serialNumber)
+            {
+                x = c;
+            }
+        }
+        return x;
+    }
 }

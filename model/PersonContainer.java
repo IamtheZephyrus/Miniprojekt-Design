@@ -1,4 +1,4 @@
-package controller; 
+package model; 
 import java.util.ArrayList;
 public class PersonContainer
 {
@@ -16,6 +16,19 @@ public class PersonContainer
             instance = new PersonContainer();
         }
         return instance;
+    }
+    
+    public Person findPersonByName(String name)
+    {
+        Person x = null;
+        for(Person p : persons)
+        {
+            if(p.getName().equals(name))
+            {
+                x = p;
+            }
+        }
+        return x;
     }
     
 }
