@@ -1,19 +1,21 @@
 package controller; 
+import java.util.ArrayList;
 public class PersonContainer
 {
-    private static PersonContainer personcontainer = null;
+    private ArrayList<Person> persons;
+    private static PersonContainer instance;
     
-    public PersonContainer()
+    private PersonContainer()
     {
-       
+        persons = new ArrayList<>();       
     }
     
     public static PersonContainer getInstance() 
     {
-        if(personcontainer == null) {
-            personcontainer = new PersonContainer();
+        if(instance == null) {
+            instance = new PersonContainer();
         }
-        return personcontainer;
+        return instance;
     }
     
 }

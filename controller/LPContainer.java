@@ -1,19 +1,22 @@
 package controller;
-
+import java.util.ArrayList;
 public class LPContainer
 {
-    private static LPContainer lpcontainer = null;
+    private ArrayList<LP> LPs;
+    private static LPContainer instance;
     
-    public LPContainer()
+    
+    private LPContainer()
     {
-        
+        LPs = new ArrayList<>();        
     }
+    
     public static LPContainer getInstance() 
     {
-        if(lpcontainer == null) {
-            lpcontainer = new LPContainer();
+        if(instance == null) {
+            instance = new LPContainer();
         }
-        return lpcontainer;
+        return instance;
     }
 
     
