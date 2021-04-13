@@ -1,5 +1,5 @@
 package tui;
-import controller;
+import controller.*;
 import java.util.Scanner;
 public class LoanUI
 {
@@ -25,6 +25,6 @@ public class LoanUI
     
     public void createLoan(int amount)
     {    
-        
+        //
     }    
 }

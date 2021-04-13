@@ -3,30 +3,26 @@ import java.time.LocalDateTime;
 public class Loan
 {
     // instance variables - replace the example below with your own
-    private int loanNumber;
     private LocalDateTime borrowDate;
     private String period;
     private String state;
     private Copy copy;
     private Person person;
+    private static int loanNumber = 0;
+
     /**
      * Constructor for objects of class Loan
      */
-    public Loan(int loanNumber, String period, String State,LP lp , Person person)
+    public Loan(String period, String State, Copy copy, Person person)
     {
-        this.loanNumber = loanNumber;
         this.borrowDate = LocalDateTime.now();
         this.period = period;
         this.state = state;
         this.copy = copy;
         this.person = person;
+        loanNumber++;
     }
-    
-    public void setLoanNumber(int loanNumber)
-    {
-        this.loanNumber = loanNumber;
-    }
-    
+        
     public int getLoanNumber()
     {
         return loanNumber;
@@ -56,5 +52,5 @@ public class Loan
     {
         return state;
     }
-        
+    
 }
