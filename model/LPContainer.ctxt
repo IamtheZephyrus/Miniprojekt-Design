@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=LPContainer
+comment1.params=
+comment1.target=LPContainer()
+comment2.params=
+comment2.target=LPContainer\ getInstance()
+comment3.params=serialNumber
+comment3.target=Copy\ findCopyBySerialNumber(int)
+numComments=4

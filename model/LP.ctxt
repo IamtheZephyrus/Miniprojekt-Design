@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=LP
+comment1.params=newTitel\ newArtist\ newBarcode
+comment1.target=LP(java.lang.String,\ java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LP\r\n
+comment2.params=titel
+comment2.target=void\ setTitel(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getTitel()
+comment4.params=barcode
+comment4.target=void\ setBarcode(int)
+comment5.params=
+comment5.target=int\ getBarcode()
+comment6.params=artist
+comment6.target=void\ setArtist(java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ getArtist()
+comment8.params=
+comment8.target=void\ getCopy()
+comment9.params=serialNumber
+comment9.target=Copy\ findCopyBySerialNumber(int)
+numComments=10
