@@ -3,8 +3,6 @@ import java.util.Scanner;
 /**
  * Write a description of class MainMenuUI here.
  *
- * @author (your name)
- * @version (a version number or a date)
  */
 public class MainMenuUI
 {
@@ -51,7 +49,7 @@ public class MainMenuUI
     }
     
     /**
-     * 
+     * Prints menu for user choice
      */
     private void printMenu() 
     {

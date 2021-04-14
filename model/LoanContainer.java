@@ -3,7 +3,8 @@ import java.util.ArrayList;
 public class LoanContainer
 {
     private ArrayList<Loan> loans;
-    private static LoanContainer instance;    
+    private static LoanContainer instance;  
+    
     private LoanContainer()
     {
         loans = new ArrayList<>();

@@ -22,6 +22,7 @@ public class Loan
         this.state = getState();
         this.copy = copy;
         this.person = person;
+        this.state = getState();
         loanNumber++;
     }
         

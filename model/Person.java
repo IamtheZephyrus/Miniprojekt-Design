@@ -7,7 +7,7 @@ public class Person
     private String phonenr;
     private int postalCode;
     private String city;
-
+    
     /**
      * Constructor for objects of class Person
      */
@@ -20,20 +20,10 @@ public class Person
         this.postalCode = newPostalCode;
         this.city = newCity;
     }
-    
-    public void setName(String name)
-    {
-        this.name = name;        
-    }
-    
+
     public String getName()
     {
         return name;        
-    }
-    
-    public void setAddress(String address)
-    {
-        this.address = address;
     }
     
     public String getAddress()
@@ -41,19 +31,9 @@ public class Person
         return address;
     }
     
-    public void setPhoneNumber(String phoneNumber)
-    {
-        this.phonenr = phoneNumber;
-    }
-    
     public String getPhoneNumber()
     {
         return phonenr;
-    }
-    
-    public void setPostalCode(int postalCode)
-    {
-        this.postalCode = postalCode;
     }
     
     public int getPostalCode()
@@ -61,17 +41,12 @@ public class Person
         return postalCode;
     }
     
-    public void setCity(String city)
-    {
-        this.city = city;
-    }
-    
     public String getCity()
     {
         return city;
     }    
     
-    public void getPerson()
+    public void getPersonInfo()
     {
         System.out.println(getName());
         System.out.println(getPhoneNumber());

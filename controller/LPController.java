@@ -2,10 +2,7 @@ package controller;
 
 import model.*;
 /**
- * Write a description of class LPController here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Used for controlling LP 
  */
 public class LPController
 {
