@@ -22,6 +22,7 @@ public class TryMe
         // initialise instance variables
         pc = PersonContainer.getInstance();
         lpC = LPContainer.getInstance();
+        l = new LP(null, null, 1); 
     }
 
     

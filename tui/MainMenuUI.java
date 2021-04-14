@@ -37,13 +37,16 @@ public class MainMenuUI
             if(choice == 2)
             {
                 tryMe = new TryMe();
-                tryMe.generateData();
-                finished = true;                
+                tryMe.generateData();                
+                System.out.println("Testdata genereret");
+                System.out.println();
+                startApp();
             }
             if(choice == 3)
             {
                 finished = true;
             }
+            finished = true;
         }
     }
     
