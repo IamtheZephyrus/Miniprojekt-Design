@@ -2,6 +2,7 @@ package tui;
 import controller.LoanController;
 import java.util.Scanner;
 import java.text.NumberFormat;
+import model.Loan;
 public class LoanUI
 {
     // instance variables
@@ -15,7 +16,6 @@ public class LoanUI
         // initialise instance variables
         loanController = new LoanController();
         scanner = new Scanner(System.in);
-        startMenu();
     }
     
     private void loanUI()
@@ -39,7 +39,6 @@ public class LoanUI
             if(choice == 1)
             {
                 findPerson();
-                System.out.println("Choice 1.");
             }
             else if(choice == 2)
             {
@@ -82,7 +81,8 @@ public class LoanUI
     
     private void createLoan()
     {
-        loanController.createLoan();
+        Loan l = loanController.createLoan();
         System.out.println("Loan registered and added.");
     }
+
 }

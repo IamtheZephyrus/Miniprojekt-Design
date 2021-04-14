@@ -1,5 +1,4 @@
 package tui;
-
 import model.*;
 /**
  * Write a description of class TryMe here.
@@ -10,9 +9,8 @@ import model.*;
 public class TryMe
 {
     // instance variables - replace the example below with your own
-    PersonContainer pc;
-    LPContainer lpC; 
-    LP l;
+    private PersonContainer personContainer;
+    private LPContainer lpContainer; 
 
     /**
      * Constructor for objects of class TryMe
@@ -20,21 +18,17 @@ public class TryMe
     public TryMe()
     {
         // initialise instance variables
-        pc = PersonContainer.getInstance();
-        lpC = LPContainer.getInstance();
-        l = new LP(null, null, 1); 
+        personContainer = PersonContainer.getInstance();
+        lpContainer = LPContainer.getInstance();
     }
 
-    
     public void generateData()
     {
-        Person tester = new Person("Monges", "Strandvejen 69", "42042069", 1337, "Aaleren");
-        pc.addPerson(tester); 
+        Person tester = new Person("Mogens", "Strandvejen 42", "42042069", 1337, "Aalleren");
+        personContainer.addPerson(tester); 
         LP plade = new LP("Kandis greatest hits", "Kandis", 12345);
         Copy cp = new Copy(12345, "01-01-1970", "500mil");
-        lpC.addLP(plade);
-        l.addCopy(cp);    
-    }   
-    
-    
+        lpContainer.addLP(plade);
+        plade.addCopy(cp);
+    }       
 }

@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=PersonContainer\ getInstance()
 comment3.params=name
 comment3.target=Person\ findPersonByName(java.lang.String)
-numComments=4
+comment4.params=person
+comment4.target=void\ addPerson(Person)
+numComments=5

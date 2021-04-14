@@ -23,6 +23,6 @@ public class Copy
     public int getSerialNumber()
     {
         // put your code here
-        return serialNumber;
+        return this.serialNumber;
     }
 }

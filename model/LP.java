@@ -20,28 +20,33 @@ public class LP
         this.artist = newArtist;
         copies = new ArrayList<>();
     }
-    
-    public void addCopy(Copy kopi)
+
+    public void addCopy(Copy copy)
     {
-        copies.add(kopi);    
+        copies.add(copy);
+        System.out.println(copy.getSerialNumber());
+        for(Copy c : copies)
+        {
+            System.out.println(copy.getSerialNumber());
+        }
     }
-    
+
     public String getTitel()
     {
         return titel;
     }
-    
+
     public int getBarcode()
     {
         return barcode;
     }
-    
+
     public String getArtist()
     {
         return artist;
     }
-    
-    public void getCopy()
+
+    public void getLPInfo()
     {
         System.out.println(getArtist());
         System.out.println(getTitel());
@@ -51,11 +56,16 @@ public class LP
     public Copy findCopyBySerialNumber(int serialNumber)
     {
         Copy x = null;
-        for(Copy c : copies)
+        boolean finished = false;
+        while(!finished)
         {
-            if(c.getSerialNumber() == serialNumber)
+            for(Copy c : copies)
             {
-                x = c;
+                if(c.getSerialNumber() == serialNumber)
+                {
+                    x = c;
+                    finished = true;
+                }
             }
         }
         return x;

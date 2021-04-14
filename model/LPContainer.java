@@ -21,15 +21,20 @@ public class LPContainer
     public Copy findCopyBySerialNumber(int serialNumber)
     {
         Copy c = null;
-        for (LP lp : LPs)
+        boolean finished = false;
+        while(!finished)
         {
-            c = lp.findCopyBySerialNumber(serialNumber);
+            for (LP lp : LPs)
+            {
+                c = lp.findCopyBySerialNumber(serialNumber);
+                finished = true;
+            }
         }
         return c;
     }
     
-    public void addLP(LP plade)
+    public void addLP(LP lp)
     {
-        LPs.add(plade);
+        LPs.add(lp);
     }
 }

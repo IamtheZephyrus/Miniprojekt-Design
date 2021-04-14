@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=LPContainer\ getInstance()
 comment3.params=serialNumber
 comment3.target=Copy\ findCopyBySerialNumber(int)
-numComments=4
+comment4.params=lp
+comment4.target=void\ addLP(LP)
+numComments=5

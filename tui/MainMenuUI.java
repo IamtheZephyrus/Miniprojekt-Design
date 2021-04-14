@@ -19,6 +19,7 @@ public class MainMenuUI
     public MainMenuUI()
     {
         scanner = new Scanner(System.in);
+        loanUI = new LoanUI();
     }
     
     public void startApp()
@@ -30,7 +31,6 @@ public class MainMenuUI
         {
             if(choice == 1)
             {
-                loanUI = new LoanUI();
                 loanUI.startMenu();
                 finished = true;
             }
