@@ -19,7 +19,7 @@ public class Loan
     {
         this.borrowDate = LocalDate.now();
         this.period = borrowDate.plusDays(14);
-        this.state = state;
+        this.state = getState();
         this.copy = copy;
         this.person = person;
         loanNumber++;
