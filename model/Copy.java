@@ -9,7 +9,7 @@ public class Copy
     /**
      * Constructor for objects of class Copy
      */
-    public Copy(int serialNumber, String purchaseDate,String purchasePrice)
+    public Copy(int serialNumber, String purchaseDate, String purchasePrice)
     {
         // initialise instance variables
         this.serialNumber= serialNumber;

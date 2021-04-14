@@ -20,13 +20,11 @@ public class LoanUI
     
     private void loanUI()
     {
-        System.out.println("*** Loan Menu ***");
-        System.out.println("(1) Choose borrower");
-        System.out.println("(2) Choose copy");
-        System.out.println("(3) Complete loan");
-        System.out.println("(4) Cancel process");
+        System.out.println("*** Udlåns Menu ***");
+        System.out.println("(1) Opret lån");
+        System.out.println("(2) Luk program");
         System.out.println();
-        System.out.println("Choice: ");
+        System.out.print("Valg: ");
     }
     
     public void startMenu()
@@ -39,40 +37,34 @@ public class LoanUI
             if(choice == 1)
             {
                 findPerson();
-            }
-            else if(choice == 2)
-            {
                 findCopy();
-            }
-            else if(choice == 3)
-            {
                 createLoan();
             }
-            else if(choice == 4)
+            else if(choice == 2)
             {
                 finished = true;
             }
             else
             {
-                System.out.println("Invalid input. Try again.");
+                System.out.println("Forkert input. Prøv igen.");
             }
         }
     }    
     
     private void findPerson()
     {
-        System.out.println("Type in name of the person borrowing: ");
+        System.out.println("Indtast låners navn: ");
         String name = scanner.next();
         loanController.findPersonByName(name);
     }
     
     private void findCopy()
     {
-        System.out.println("Type in serialnumber of the copy being borrowed: ");
+        System.out.println("Indtast serienummer på den valgte kopi: ");
         Integer serialNumber = null;
         while(!scanner.hasNextInt())
         {
-            System.out.print("Invalid input. Must be a number.");
+            System.out.print("Forkert input. Skal være et nummer.");
             scanner.nextLine();  
         }
         serialNumber = scanner.nextInt();      
@@ -82,7 +74,7 @@ public class LoanUI
     private void createLoan()
     {
         Loan l = loanController.createLoan();
-        System.out.println("Loan registered and added.");
+        System.out.println("Lånet er registreret og tilføjet.");
     }
 
 }

@@ -55,11 +55,11 @@ public class MainMenuUI
      */
     private void printMenu() 
     {
-        System.out.println("**** Main Menu ****");
+        System.out.println("**** Hoved Menu ****");
         System.out.println("(1) Udlåns menu");
         System.out.println("(2) Generer testdata");
         System.out.println("(3) Luk program");
         System.out.println();
-        System.out.println("Valg: ");
+        System.out.print("Valg: ");
     }
 }

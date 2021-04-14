@@ -23,12 +23,7 @@ public class LP
 
     public void addCopy(Copy copy)
     {
-        copies.add(copy);
-        System.out.println(copy.getSerialNumber());
-        for(Copy c : copies)
-        {
-            System.out.println(copy.getSerialNumber());
-        }
+        copies.add(copy);        
     }
 
     public String getTitel()
