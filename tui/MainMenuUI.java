@@ -11,6 +11,7 @@ public class MainMenuUI
     // instance variables
     private int choice;
     private Scanner scanner;
+    private LoanUI loanUI;
     /**
      * Constructor for objects of class MainMenuUI
      */
@@ -21,14 +22,16 @@ public class MainMenuUI
     
     public void startApp()
     {
+        printMenu();
         boolean finished = false;
         int choice = scanner.nextInt();
-        printMenu();
         while(!finished)
         {
             if(choice == 1)
             {
-                new LoanUI();
+                loanUI = new LoanUI();
+                loanUI.startMenu();
+                finished = true;
             }
             if(choice == 2)
             {
@@ -39,11 +42,12 @@ public class MainMenuUI
                 finished = true;
             }
         }
-        
     }
     
-    //basic menu TUI
-    public void printMenu() 
+    /**
+     * 
+     */
+    private void printMenu() 
     {
         System.out.println("**** Main Menu ****");
         System.out.println("(1) Udlåns menu");

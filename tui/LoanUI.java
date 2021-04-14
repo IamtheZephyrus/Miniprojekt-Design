@@ -1,9 +1,11 @@
 package tui;
 import controller.LoanController;
 import java.util.Scanner;
+import java.text.NumberFormat;
 public class LoanUI
 {
     // instance variables
+    private LoanController loanController;
     private Scanner scanner;
     /**
      * Constructor for objects of class LoanUI
@@ -11,10 +13,12 @@ public class LoanUI
     public LoanUI()
     {
         // initialise instance variables
+        loanController = new LoanController();
         scanner = new Scanner(System.in);
+        startMenu();
     }
     
-    public void loanUI()
+    private void loanUI()
     {
         System.out.println("*** Loan Menu ***");
         System.out.println("(1) Choose borrower");
@@ -25,9 +29,60 @@ public class LoanUI
         System.out.println("Choice: ");
     }
     
-    
-    public void createLoan(int amount)
+    public void startMenu()
     {    
-        
+        boolean finished = false;
+        loanUI();
+        while(!finished)
+        {
+            int choice = scanner.nextInt();
+            if(choice == 1)
+            {
+                findPerson();
+                System.out.println("Choice 1.");
+            }
+            else if(choice == 2)
+            {
+                findCopy();
+            }
+            else if(choice == 3)
+            {
+                createLoan();
+            }
+            else if(choice == 4)
+            {
+                finished = true;
+            }
+            else
+            {
+                System.out.println("Invalid input. Try again.");
+            }
+        }
     }    
+    
+    private void findPerson()
+    {
+        System.out.println("Type in name of the person borrowing: ");
+        String name = scanner.next();
+        loanController.findPersonByName(name);
+    }
+    
+    private void findCopy()
+    {
+        System.out.println("Type in serialnumber of the copy being borrowed: ");
+        Integer serialNumber = null;
+        while(!scanner.hasNextInt())
+        {
+            System.out.print("Invalid input. Must be a number.");
+            scanner.nextLine();  
+        }
+        serialNumber = scanner.nextInt();      
+        loanController.findCopyBySerialNumber(serialNumber);
+    }
+    
+    private void createLoan()
+    {
+        loanController.createLoan();
+        System.out.println("Loan registered and added.");
+    }
 }
