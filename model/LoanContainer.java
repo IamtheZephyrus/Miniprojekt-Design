@@ -16,6 +16,7 @@ public class LoanContainer
         }
         return instance;
     }
+    
     public void addLoan(Loan loan)
     {
         loans.add(loan);

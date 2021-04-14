@@ -4,7 +4,6 @@ public class LPContainer
 {
     private ArrayList<LP> LPs;
     private static LPContainer instance;
-    
     private LPContainer()
     {
         LPs = new ArrayList<>();        

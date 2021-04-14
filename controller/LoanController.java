@@ -8,11 +8,13 @@ import model.*;
  */
 public class LoanController
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private Person person;
     private Copy copy;
+    private Loan loan;
     private PersonController pController;
     private LPController lController;
+    private LoanContainer loanContainer;
     /**
      * Constructor for objects of class LoanController
      */
@@ -21,16 +23,22 @@ public class LoanController
         // initialise instance variables
         pController = new PersonController();
         lController = new LPController();
+        loanContainer = loanContainer.getInstance();
     }
-
+    
     /**
-     * SPLIT OP I METODER SÅ DET PASSER MED DIAGRAM
+     * Creates loan
      */
-    public Loan createLoan(String name, int serialNumber)
+    public Loan createLoan()
     {
-        return new Loan(loanNumber, period, state,
-                        person,
-                        copy);
+        this.loan = new Loan(copy, person);
+        addLoan();
+        return this.loan;
+    }
+    
+    public void addLoan()
+    {
+        loanContainer.addLoan(this.loan);
     }
     
     public void findPersonByName(String name)

@@ -1,7 +1,7 @@
 package model;
 public class Person
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private String name;
     private String address;
     private String phonenr;
@@ -19,7 +19,6 @@ public class Person
         this.phonenr = newPhone;
         this.postalCode = newPostalCode;
         this.city = newCity;
-        
     }
     
     public void setName(String name)

@@ -1,10 +1,12 @@
 package model;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class Loan
 {
-    // instance variables - replace the example below with your own
-    private LocalDateTime borrowDate;
-    private String period;
+    // instance variables
+    private LocalDate borrowDate;
+    private LocalDate period;
     private String state;
     private Copy copy;
     private Person person;
@@ -13,10 +15,10 @@ public class Loan
     /**
      * Constructor for objects of class Loan
      */
-    public Loan(String period, String State, Copy copy, Person person)
+    public Loan(Copy copy, Person person)
     {
-        this.borrowDate = LocalDateTime.now();
-        this.period = period;
+        this.borrowDate = LocalDate.now();
+        this.period = borrowDate.plusDays(14);
         this.state = state;
         this.copy = copy;
         this.person = person;
@@ -28,29 +30,39 @@ public class Loan
         return loanNumber;
     }
     
-    public LocalDateTime getBorrowDate()
+    public LocalDate getBorrowDate()
     {
         return this.borrowDate;
     }
     
-    public void setPeriod(String period)
-    {
-        this.period = period;
-    }
-    
-    public String getPeriod()
+    public LocalDate getPeriod()
     {
         return period;
     }
-    
-    public void setState(String state)
-    {
-        this.state = state;
-    }
-    
+
     public String getState()
     {
+        LocalDate now = LocalDate.now();
+        ArrayList<String> states = populateStates();
+        String state = states.get(0);
+        if(now.compareTo(period) == -1)
+        {
+            state = states.get(2);
+        }
+        else if(now.compareTo(period) >= 0)
+        {
+            state = states.get(1);
+        }
         return state;
+    }
+    
+    private ArrayList populateStates()
+    {
+        ArrayList<String> states = new ArrayList<>();
+        states.add("Inactive.");
+        states.add("Active.");
+        states.add("Late.");
+        return states;
     }
     
 }

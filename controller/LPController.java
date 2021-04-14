@@ -9,10 +9,8 @@ import model.*;
  */
 public class LPController
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // instance variables
     private LPContainer container;
-
     /**
      * Constructor for objects of class LPController
      */
@@ -21,15 +19,6 @@ public class LPController
         // initialise instance variables
         this.container = LPContainer.getInstance();
     }
-
-    // /**
-     // * 
-     // */
-    // public LP findCopyBySerialNumber(int serialNumber)
-    // {
-        // // put your code here
-        // return container.findLPBySerialNumber(serialNumber);
-    // }
     
     public Copy findCopyBySerialNumber(int serialNumber)
     {

@@ -1,7 +1,7 @@
 package model;
 public class Copy
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private int serialNumber;
     private String purchaseDate;
     private String purchasePrice;
@@ -18,7 +18,7 @@ public class Copy
     }
 
     /**
-     * 
+     * Returns serialNumber
      */
     public int getSerialNumber()
     {

@@ -1,9 +1,8 @@
 package model;
 import java.util.ArrayList;
-
 public class LP
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private String titel;
     private String artist;
     private String publicationDate;    
@@ -22,29 +21,14 @@ public class LP
         copies = new ArrayList<>();
     }
     
-    public void setTitel(String titel) 
-    {
-        this.titel = titel;
-    }
-    
     public String getTitel()
     {
         return titel;
     }
     
-    public void setBarcode(int barcode)
-    {
-        this.barcode = barcode;
-    }
-    
     public int getBarcode()
     {
         return barcode;
-    }
-    
-    public void setArtist(String artist)
-    {
-        this.artist = artist;
     }
     
     public String getArtist()
