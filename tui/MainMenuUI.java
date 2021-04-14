@@ -12,6 +12,7 @@ public class MainMenuUI
     private int choice;
     private Scanner scanner;
     private LoanUI loanUI;
+    private TryMe tryMe;
     /**
      * Constructor for objects of class MainMenuUI
      */
@@ -35,7 +36,9 @@ public class MainMenuUI
             }
             if(choice == 2)
             {
-                // TODO IMPLEMENT TRYME CLASS
+                tryMe = new TryMe();
+                tryMe.generateData();
+                finished = true;                
             }
             if(choice == 3)
             {

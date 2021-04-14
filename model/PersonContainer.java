@@ -31,4 +31,9 @@ public class PersonContainer
         return x;
     }
     
+    public void addPerson(Person person)
+    {
+        persons.add(person);
+    }
+    
 }

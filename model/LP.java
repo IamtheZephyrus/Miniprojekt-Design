@@ -21,6 +21,11 @@ public class LP
         copies = new ArrayList<>();
     }
     
+    public void addCopy(Copy kopi)
+    {
+        copies.add(kopi);    
+    }
+    
     public String getTitel()
     {
         return titel;

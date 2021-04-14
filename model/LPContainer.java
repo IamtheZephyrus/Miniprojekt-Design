@@ -27,4 +27,9 @@ public class LPContainer
         }
         return c;
     }
+    
+    public void addLP(LP plade)
+    {
+        LPs.add(plade);
+    }
 }
