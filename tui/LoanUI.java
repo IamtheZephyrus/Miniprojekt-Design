@@ -8,6 +8,7 @@ public class LoanUI
     // instance variables
     private LoanController loanController;
     private Scanner scanner;
+    private MainMenuUI main;
     /**
      * Constructor for objects of class LoanUI
      */
@@ -22,7 +23,7 @@ public class LoanUI
     {
         System.out.println("*** Udlåns Menu ***");
         System.out.println("(1) Opret lån");
-        System.out.println("(2) Luk program");
+        System.out.println("(2) Tilbage til hoved menu ");
         System.out.println();
         System.out.print("Valg: ");
     }
@@ -39,6 +40,7 @@ public class LoanUI
                 findPerson();
                 findCopy();
                 createLoan();
+                loanUI();
             }
             else if(choice == 2)
             {
@@ -49,6 +51,8 @@ public class LoanUI
                 System.out.println("Forkert input. Prøv igen.");
             }
         }
+        MainMenuUI main = new MainMenuUI();
+        main.startApp();
     }    
     
     private void findPerson()
@@ -74,7 +78,7 @@ public class LoanUI
     private void createLoan()
     {
         Loan l = loanController.createLoan();
-        System.out.println("Lånet er registreret og tilføjet.");
+        System.out.println("Lånet er registreret og tilføjet.\n");
     }
 
 }

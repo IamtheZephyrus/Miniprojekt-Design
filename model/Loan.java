@@ -46,11 +46,11 @@ public class Loan
         LocalDate now = LocalDate.now();
         ArrayList<String> states = populateStates();
         String state = states.get(0);
-        if(now.compareTo(period) == -1)
+        if(period.compareTo(now) <= 0)
         {
-            state = states.get(2);
+            state = states.get(0);
         }
-        else if(now.compareTo(period) >= 0)
+        else if(period.compareTo(now) > 0)
         {
             state = states.get(1);
         }
@@ -60,9 +60,8 @@ public class Loan
     private ArrayList populateStates()
     {
         ArrayList<String> states = new ArrayList<>();
-        states.add("Inactive.");
-        states.add("Active.");
-        states.add("Late.");
+        states.add("Inaktivt.");
+        states.add("Aktivt.");
         return states;
     }
     
