@@ -1,5 +1,8 @@
 package model;
 import java.util.ArrayList;
+/**
+ * Handles LP class
+ */
 public class LP
 {
     // instance variables
@@ -21,26 +24,45 @@ public class LP
         copies = new ArrayList<>();
     }
 
+    /**
+     * Adds copy to LP
+     * @param Copy copy
+     */
     public void addCopy(Copy copy)
     {
         copies.add(copy);        
     }
 
+    /**
+     * Gets title of LP
+     * @return String titel
+     */
     public String getTitel()
     {
         return titel;
     }
 
+    /**
+     * Gets barcode of LP
+     * @return int barcode
+     */
     public int getBarcode()
     {
         return barcode;
     }
 
+    /**
+     * Gets artist of LP
+     * @return String artist
+     */
     public String getArtist()
     {
         return artist;
     }
 
+    /**
+     * Prints info about the LP
+     */
     public void getLPInfo()
     {
         System.out.println(getArtist());
@@ -48,6 +70,11 @@ public class LP
         System.out.println(getBarcode()); 
     }
 
+    /**
+     * Searches for copy by serialnumber
+     * @param int serialNumber
+     * @return Copy
+     */
     public Copy findCopyBySerialNumber(int serialNumber)
     {
         Copy x = null;

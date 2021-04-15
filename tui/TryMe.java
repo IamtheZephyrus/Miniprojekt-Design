@@ -1,10 +1,7 @@
 package tui;
 import model.*;
 /**
- * Write a description of class TryMe here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Class making mock data for loan creation
  */
 public class TryMe
 {
@@ -22,6 +19,7 @@ public class TryMe
         lpContainer = LPContainer.getInstance();
     }
 
+    
     public void generateData()
     {
         Person tester = new Person("Mogens", "Strandvejen 42", "42042069", 1337, "Aalleren");

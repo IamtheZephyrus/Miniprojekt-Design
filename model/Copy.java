@@ -1,4 +1,7 @@
 package model;
+/**
+ * Handles Copy class
+ */
 public class Copy
 {
     // instance variables
@@ -19,6 +22,7 @@ public class Copy
 
     /**
      * Returns serialNumber
+     * @return int serialNumber
      */
     public int getSerialNumber()
     {

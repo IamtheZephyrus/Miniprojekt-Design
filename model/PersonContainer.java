@@ -1,15 +1,24 @@
 package model; 
 import java.util.ArrayList;
+/**
+ * Contains Person after they're created
+ */
 public class PersonContainer
 {
     private ArrayList<Person> persons;
     private static PersonContainer instance;
     
+    /**
+     * Constructor for objects of class PersonContainer
+     */
     private PersonContainer()
     {
         persons = new ArrayList<>();       
     }
     
+    /**
+     * Singleton method
+     */
     public static PersonContainer getInstance() 
     {
         if(instance == null) {
@@ -18,6 +27,11 @@ public class PersonContainer
         return instance;
     }
     
+    /**
+     * Searches for person by name
+     * @param String name
+     * @return Person
+     */
     public Person findPersonByName(String name)
     {
         Person x = null;
@@ -31,6 +45,9 @@ public class PersonContainer
         return x;
     }
     
+    /**
+     * Adds person to the container
+     */
     public void addPerson(Person person)
     {
         persons.add(person);

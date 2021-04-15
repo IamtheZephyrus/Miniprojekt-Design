@@ -2,6 +2,9 @@ package model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+/**
+ * Handles Loan class
+ */
 public class Loan
 {
     // instance variables
@@ -25,22 +28,40 @@ public class Loan
         this.state = getState();
         loanNumber++;
     }
-        
+    
+    /**
+     * Gets loanNumber
+     * @return int loanNumber
+     */
     public int getLoanNumber()
     {
         return loanNumber;
     }
     
+    /**
+     * Gets borrowDate
+     * @return LocalDate borrowDate
+     */
     public LocalDate getBorrowDate()
     {
         return this.borrowDate;
     }
     
+    /**
+     * Gets get period defined as borrowdate + 14 days
+     * @return LocalDate period
+     */
     public LocalDate getPeriod()
     {
         return period;
     }
-
+    
+    /**
+     * Gets state of loan
+     * State is decided depending on whether 
+     * there are days left on the period from the borrowDate
+     * @return String state
+     */
     public String getState()
     {
         LocalDate now = LocalDate.now();
@@ -57,6 +78,10 @@ public class Loan
         return state;
     }
     
+    /**
+     * Populates and returns a list of states
+     * @return ArrayList String
+     */
     private ArrayList populateStates()
     {
         ArrayList<String> states = new ArrayList<>();

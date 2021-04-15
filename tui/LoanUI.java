@@ -3,12 +3,16 @@ import controller.LoanController;
 import java.util.Scanner;
 import java.text.NumberFormat;
 import model.Loan;
+/**
+ * UI for loan creation
+ */
 public class LoanUI
 {
     // instance variables
     private LoanController loanController;
     private Scanner scanner;
     private MainMenuUI main;
+    
     /**
      * Constructor for objects of class LoanUI
      */
@@ -19,6 +23,9 @@ public class LoanUI
         scanner = new Scanner(System.in);
     }
     
+    /**
+     * Prints text menu for userprompts
+     */
     private void loanUI()
     {
         System.out.println("*** Udlåns Menu ***");
@@ -28,6 +35,9 @@ public class LoanUI
         System.out.print("Valg: ");
     }
     
+    /**
+     * Main method
+     */
     public void startMenu()
     {    
         boolean finished = false;
@@ -55,6 +65,9 @@ public class LoanUI
         main.startApp();
     }    
     
+    /**
+     * Finds person by name receiving the loan
+     */
     private void findPerson()
     {
         System.out.println("Indtast låners navn: ");
@@ -62,6 +75,9 @@ public class LoanUI
         loanController.findPersonByName(name);
     }
     
+    /**
+     * Finds copy of LP by serialnumber
+     */
     private void findCopy()
     {
         System.out.println("Indtast serienummer på den valgte kopi: ");
@@ -75,6 +91,9 @@ public class LoanUI
         loanController.findCopyBySerialNumber(serialNumber);
     }
     
+    /**
+     * Creates the loan
+     */
     private void createLoan()
     {
         Loan l = loanController.createLoan();

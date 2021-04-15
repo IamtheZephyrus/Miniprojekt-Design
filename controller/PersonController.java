@@ -19,7 +19,9 @@ public class PersonController
     }
 
     /**
-     * Finds person
+     * Searches for person by name
+     * @param String name
+     * @return Person
      */
     public Person findPersonByName(String name)
     {

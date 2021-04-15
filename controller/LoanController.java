@@ -36,16 +36,27 @@ public class LoanController
         return this.loan;
     }
     
+    /**
+     * Adds loan to container
+     */
     public void addLoan()
     {
         loanContainer.addLoan(this.loan);
     }
     
+    /**
+     * Searches for person by name
+     * @param int serialNumber
+     */
     public void findPersonByName(String name)
     {
         this.person = pController.findPersonByName(name);
     }
     
+    /**
+     * Searches for copy by serialnumber
+     * @param int serialNumber
+     */
     public void findCopyBySerialNumber(int serialNumber)
     {
         this.copy = lController.findCopyBySerialNumber(serialNumber);
