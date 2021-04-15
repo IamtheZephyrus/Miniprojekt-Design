@@ -2,7 +2,7 @@ package controller;
 import model.PersonContainer;
 import model.Person;
 /**
- * Write a description of class PersonController here.
+ * Used for controlling Person class
  */
 public class PersonController
 {

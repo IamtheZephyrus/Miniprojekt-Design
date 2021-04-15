@@ -2,7 +2,7 @@ package controller;
 
 import model.*;
 /**
- * Used for controlling LP 
+ * Used for controlling LP class
  */
 public class LPController
 {

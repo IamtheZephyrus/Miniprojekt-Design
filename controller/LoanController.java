@@ -1,10 +1,7 @@
 package controller;
 import model.*;
 /**
- * Write a description of class LoanController here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Used for controlling Loan class
  */
 public class LoanController
 {
